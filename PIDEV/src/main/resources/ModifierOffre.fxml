@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="808.0" prefWidth="480.0" spacing="15.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.pidev.controllers.ModifierOffre">
+    <children>
+        <Label text="Nom de l'Offre" />
+        <TextField fx:id="nomField" prefHeight="9.0" prefWidth="402.0" />
+
+        <Label text="Categorie" />
+        <ComboBox fx:id="CategorieComboBox" prefHeight="30.0" prefWidth="300.0" />
+
+        <Label text="Description" />
+        <TextField fx:id="descriptionField" prefWidth="300.0" />
+
+        <Label text="Durée en Heures" />
+        <TextField fx:id="dureeField" prefWidth="300.0" />
+
+        <Label text="Prix" />
+        <TextField fx:id="prixField" prefHeight="36.0" prefWidth="87.0" />
+
+        <Label text="Statut" />
+        <ComboBox fx:id="statusComboBox" prefHeight="30.0" prefWidth="300.0" />
+
+        <!-- HBox for Image Selection Button -->
+        <HBox alignment="CENTER_LEFT" spacing="10" />
+
+        <Label text="Liste des images" />
+        <ListView fx:id="imageListView" editable="false" prefHeight="101.0" prefWidth="402.0" />
+         <Button onAction="#choisirImage" text="Parcourir" />
+         <!-- Option to Remove Images -->
+         <Button onAction="#supprimerImage" text="Supprimer l'image" />
+
+        <HBox alignment="CENTER_LEFT" spacing="10" />
+
+        <HBox alignment="CENTER" spacing="15">
+            <Button onAction="#sauvegarderOffre" text="Sauvegarder" />
+            <Button onAction="#fermerModale" text="Annuler" />
+        </HBox>
+    </children>
+</VBox>

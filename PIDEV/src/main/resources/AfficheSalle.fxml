@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Import FlowPane -->
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.pidev.controllers.AfficheSalle">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="648.0" prefWidth="930.0">
+         <children>
+            <BorderPane layoutY="28.0" prefHeight="648.0" prefWidth="930.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <!-- Sidebar for Navigation -->
+                  <AnchorPane prefHeight="648.0" prefWidth="104.0" style="-fx-background-color: #484747;" BorderPane.alignment="CENTER">
+                     <!-- Side menu buttons can go here -->
+                  </AnchorPane>
+               </left>
+               <center>
+                  <!-- Main Content Area with Planning Display -->
+                  <AnchorPane prefHeight="583.0" prefWidth="1020.0" BorderPane.alignment="CENTER">
+                     <!-- Add Search Section -->
+                     <HBox fx:id="planningHBox" layoutX="5.0" layoutY="10.0" spacing="10.0" />
+                     <!-- FlowPane for dynamically added planning boxes -->
+                     <FlowPane fx:id="planningFlowPane" hgap="10.0" layoutX="5.0" layoutY="77.0" prefHeight="183.0" prefWidth="824.0" vgap="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="77.0">
+                        <!-- Dynamic content from the controller will be added here -->
+                     </FlowPane>
+
+                     <!-- Add button styled with green -->
+                     <Button layoutX="83.0" layoutY="36.0" mnemonicParsing="false" onAction="#openAddPlanningPage" style="-fx-background-color: #2ef01d; -fx-text-fill: white; -fx-border-color: #2ef01d; -fx-border-width: 2px; -fx-font-size: 10px; -fx-padding: 5px 10px; -fx-effect: dropshadow(gaussian, #000000, 5, 0.5, 0, 1);" text="Add" />
+
+                     <!-- Search TextField for the second location (No green styling) -->
+                     <TextField fx:id="searchTextField" layoutX="611.0" layoutY="31.0" promptText="Search by second localisation..." style="-fx-padding: 10px;" />
+
+                     <!-- Search button styled with green -->
+                     <Button layoutX="540.0" layoutY="35.0" onAction="#handleSearch" style="-fx-background-color: #2ef01d; -fx-text-fill: white; -fx-border-color: #2ef01d; -fx-border-width: 2px; -fx-font-size: 10px; -fx-padding: 5px 10px; -fx-effect: dropshadow(gaussian, #000000, 5, 0.5, 0, 1);" text="Search" />
+
+                     <!-- Sort button styled with green -->
+                     <Button layoutX="781.0" layoutY="36.0" mnemonicParsing="false" onAction="#sortSallesByName" style="-fx-background-color: #2ef01d; -fx-text-fill: white; -fx-border-color: #2ef01d; -fx-border-width: 2px; -fx-font-size: 10px; -fx-padding: 5px 10px; -fx-effect: dropshadow(gaussian, #000000, 5, 0.5, 0, 1);" text="tri" />
+
+                     <!-- Maps button styled with green -->
+                     <Button layoutX="14.0" layoutY="36.0" onAction="#openmaps" style="-fx-background-color: #2ef01d; -fx-text-fill: white; -fx-border-color: #2ef01d; -fx-border-width: 2px; -fx-font-size: 10px; -fx-padding: 5px 10px; -fx-effect: dropshadow(gaussian, #000000, 5, 0.5, 0, 1);" text="Maps" />
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+
+      <!-- Sidebar Menu for Navigation -->
+      <VBox layoutX="0.0" layoutY="89.0" prefHeight="570.0" prefWidth="115.0" style="-fx-background-color: #484747;">
+         <children>
+            <ButtonBar prefHeight="0.0" prefWidth="111.0" />
+            <!-- Menu Button: Salles -->
+            <Button minHeight="0.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="SALLE" textFill="#f7f7f7">
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+
+      <!-- Top Menu (e.g., Navigation Bar) -->
+      <HBox layoutX="116.0" prefHeight="40.0" prefWidth="824.0" style="-fx-background-color: #484747;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="MENU" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+
+   </children>
+</AnchorPane>

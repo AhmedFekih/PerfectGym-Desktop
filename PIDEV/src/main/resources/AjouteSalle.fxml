@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.pidev.controllers.AjouterSalleController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="930.0">
+         <children>
+            <BorderPane layoutY="28.0" prefHeight="648.0" prefWidth="930.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="662.0" prefWidth="111.0" style="-fx-background-color: #484747;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox layoutX="-4.0" layoutY="114.4" prefHeight="570.0" prefWidth="115.0" style="-fx-background-color: #484747;" AnchorPane.bottomAnchor="-36.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="114.0">
+                           <children>
+                              <ButtonBar prefHeight="0.0" prefWidth="111.0" />
+                              <Button minHeight="0.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="SALLE" textFill="#f7f7f7">
+                                 <VBox.margin>
+                                    <Insets bottom="50.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="PRODUITS" textFill="#faf9f9">
+                                 <VBox.margin>
+                                    <Insets bottom="50.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="PLANNING" textFill="#fafafa">
+                                 <VBox.margin>
+                                    <Insets bottom="50.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="231.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="EVENEMENTS" textFill="#f2f2f2">
+                                 <VBox.margin>
+                                    <Insets bottom="50.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="321.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="Button" textFill="#484747" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </left>
+            </BorderPane>
+            <HBox layoutX="115.0" layoutY="-1.0" prefHeight="47.0" prefWidth="815.0" style="-fx-background-color: #484747;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="MENU" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="ABOUT" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="191.0" layoutY="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="CONTACT" textFill="#efefef">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="372.0" layoutY="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="ACCOUNT" textFill="#f7f3f3">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="115.0" layoutY="49.0" prefHeight="593.0" prefWidth="815.0">
+               <children>
+                  <Label layoutX="191.0" layoutY="162.0" prefHeight="18.0" prefWidth="111.0" text="Nom" textFill="#f2f2f2">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="221.0" prefHeight="18.0" prefWidth="111.0" text="Localisation" textFill="#f2f2f2">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="281.0" prefHeight="18.0" prefWidth="111.0" text="Image" textFill="#f2f2f2">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="345.0" prefHeight="18.0" prefWidth="111.0" text="Status" textFill="#f2f2f2">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="288.0" layoutY="434.0" mnemonicParsing="false" onAction="#ajouteUserAction" text="Confirmer" />
+                  <Button layoutX="437.0" layoutY="434.0" mnemonicParsing="false" onAction="#cancelAddPlanning" text="Annuler" />
+                  <TextField fx:id="nomTextField" layoutX="333.0" layoutY="165.0" />
+                  <TextField fx:id="localisationTextField" layoutX="332.0" layoutY="226.0" />
+                  <TextField fx:id="statutTextField" layoutX="333.0" layoutY="348.0" />
+                  <Button layoutX="332.0" layoutY="284.0" mnemonicParsing="false" onAction="#handleUploadButton" prefHeight="26.0" prefWidth="150.0" text="Upload" />
+                  <Label fx:id="errorLabel" layoutX="331.0" layoutY="400.0" prefHeight="18.0" prefWidth="150.0" style="-fx-text-fill: red;" text="" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

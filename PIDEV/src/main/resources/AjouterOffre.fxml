@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="657.0" prefWidth="820.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.pidev.controllers.AjouterOffre">
+   <children>
+      <!-- Champs de texte -->
+      <TextField fx:id="NomOffreId" layoutX="225.0" layoutY="95.0" />
+      <ComboBox fx:id="CategorieComboBox" layoutX="225.0" layoutY="143.0" prefHeight="30.0" prefWidth="175.0" />
+      <TextField fx:id="DescriptionId" layoutX="225.0" layoutY="195.0" prefHeight="50.0" prefWidth="250.0" /> <!-- Déplacé sous Description, à remplacer par ListView -->
+      <!-- Déplacé sous Description, à remplacer par ListView -->
+      <Button layoutX="498.0" layoutY="276.0" mnemonicParsing="false" onAction="#choisirImage" text="Parcourir" /> <!-- Déplacé sous Description -->
+
+      <!-- Liste des images sélectionnées -->
+      <ListView fx:id="imageListView" layoutX="224.0" layoutY="256.0" prefHeight="100.0" prefWidth="250.0" />
+
+      <TextField fx:id="DureeId" layoutX="225.0" layoutY="366.0" />
+      <ComboBox fx:id="StatusComboBox" layoutX="225.0" layoutY="407.0" prefHeight="30.0" prefWidth="175.0" />
+      <TextField fx:id="PrixId" layoutX="225.0" layoutY="444.0" /> <!-- Déplacé vers le bas pour éviter le chevauchement -->
+
+      <!-- Labels -->
+      <Label layoutX="106.0" layoutY="103.0" text="Nom de l'offre" />
+      <Label layoutX="139.0" layoutY="149.0" text="Categorie" /> <!-- Déplacé vers le bas -->
+      <Label layoutX="132.0" layoutY="210.0" text="Description" /> <!-- Déplacé sous Description -->
+      <Label layoutX="93.0" layoutY="296.0" text="Liste des images" /> <!-- Déplacé sous Description -->
+      <Label layoutX="94.0" layoutY="374.0" text="Durée en heures" /> <!-- Déplacé vers le bas -->
+      <Label layoutX="174.0" layoutY="413.0" text="Statut" /> <!-- Déplacé vers le bas -->
+      <Label layoutX="184.0" layoutY="452.0" text="Prix" /> <!-- Déplacé vers le bas pour correspondre au champ Prix -->
+
+      <!-- Boutons espacés -->
+      <Button layoutX="199.0" layoutY="519.0" mnemonicParsing="false" onAction="#AjouterOffre" text="Enregistrer" /> <!-- Déplacé vers le bas -->
+      <Button layoutX="384.0" layoutY="519.0" mnemonicParsing="false" onAction="#Annuler" text="Annuler" /> <!-- Déplacé vers le bas -->
+
+   </children>
+</AnchorPane>

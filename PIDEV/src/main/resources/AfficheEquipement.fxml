@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="659.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.pidev.controllers.AfficheEquipement">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="648.0" prefWidth="930.0">
+         <children>
+            <BorderPane layoutY="28.0" prefHeight="648.0" prefWidth="1109.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <!-- Sidebar for Navigation -->
+                  <AnchorPane prefHeight="648.0" prefWidth="104.0" style="-fx-background-color: #484747;" BorderPane.alignment="CENTER">
+                     <!-- Side menu buttons can go here -->
+                  </AnchorPane>
+               </left>
+               <center>
+                  <!-- Main Content Area with Planning Display -->
+                  <ScrollPane prefHeight="648.0" prefWidth="762.0" BorderPane.alignment="CENTER" fitToHeight="true" fitToWidth="true">
+                     <content>
+                        <AnchorPane prefHeight="648.0" prefWidth="762.0">
+                           <!-- HBox for dynamically added planning boxes -->
+                           <HBox fx:id="planningHBox" layoutX="5.0" layoutY="77.0" prefHeight="189.0" prefWidth="824.0" spacing="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="77.0">
+                              <!-- Dynamic content from the controller will be added here -->
+                           </HBox>
+                           <!-- FlowPane for dynamically added planning boxes -->
+                           <FlowPane fx:id="planningFlowPane" hgap="10.0" layoutX="5.0" layoutY="77.0" prefHeight="128.0" prefWidth="824.0" vgap="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="77.0">
+                              <!-- Dynamic content from the controller will be added here -->
+                           </FlowPane>
+                           <!-- Add button to allow adding new content -->
+                           <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#openAddPlanningPage" style="-fx-background-color: #2ef01d; -fx-text-fill: white; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="Add" />
+                           <Button layoutX="489.0" layoutY="35.0" onAction="#chercherParNomEquipement" style="-fx-background-color: #2ef01d; -fx-text-fill: white; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="Search" />
+                           <TextField fx:id="searchField" layoutX="552.0" layoutY="38.0" promptText="Enter Equipment Name" />
+                           <Button layoutX="713.0" layoutY="37.0" mnemonicParsing="false" onAction="#trierEquipementParNom" style="-fx-background-color: #2ef01d; -fx-text-fill: white; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px;" text="Trier par Nom" />
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+
+      <!-- Sidebar Menu for Navigation -->
+      <VBox layoutX="0.0" layoutY="89.0" prefHeight="570.0" prefWidth="115.0" style="-fx-background-color: #484747;">
+         <children>
+            <ButtonBar prefHeight="0.0" prefWidth="111.0" />
+            <!-- Menu Button: Salles -->
+            <Button minHeight="0.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #f7f7f7;" text="SALLE">
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Button>
+            <!-- Menu Button: Produits -->
+            <Button layoutX="10.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #faf9f9;" text="PRODUITS">
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Button>
+            <!-- Menu Button: Planning -->
+            <Button layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #fafafa;" text="PLANNING">
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Button>
+            <!-- Menu Button: Evenements -->
+            <Button layoutX="10.0" layoutY="231.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #f2f2f2;" text="EVENEMENTS">
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Button>
+            <!-- Additional Button -->
+            <Button layoutX="10.0" layoutY="321.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #484747;" text="Button" />
+         </children>
+      </VBox>
+
+      <!-- Top Menu (e.g., Navigation Bar) -->
+      <HBox layoutX="116.0" prefHeight="40.0" prefWidth="824.0" style="-fx-background-color: #484747;">
+         <children>
+            <!-- Top menu buttons -->
+            <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;" text="MENU">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;" text="ABOUT">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="191.0" layoutY="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #efefef;" text="CONTACT">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="372.0" layoutY="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: #2ef01d; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #f7f3f3;" text="ACCOUNT">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="612.0" prefWidth="1008.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.pidev.controllers.VoirOffres">
+    <children>
+
+                          <Button layoutX="805.0" layoutY="72.0" mnemonicParsing="false" onAction="#VoirAbonnement" prefHeight="42.0" prefWidth="166.0" text="les Abonnements" />
+        <HBox alignment="CENTER_LEFT" layoutX="112.0" layoutY="108.0" prefHeight="82.0" prefWidth="678.0" spacing="10">
+            <ComboBox fx:id="comboBoxCritere" promptText="Choisir un critère">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Nom" />
+                        <String fx:value="Catégorie" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <TextField fx:id="textFieldRecherche" promptText="Rechercher..." />
+            <Button minHeight="24.0" minWidth="132.0" onAction="#rechercherOffres" prefHeight="40.0" prefWidth="132.0" text="Rechercher" />
+            <Button onAction="#reinitialiserRecherche" text="Réinitialiser" />
+        </HBox>        <TableView fx:id="tableViewOffres" layoutX="206.0" layoutY="190.0" prefHeight="374.0" prefWidth="650.0">
+            <columns>
+                <TableColumn fx:id="colImage" prefWidth="155.199951171875" text="Image">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="images" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                      <TableColumn fx:id="colNom" prefWidth="116.7999267578125" text="Nom de l'offre" />
+                <TableColumn fx:id="colDescription" prefWidth="107.2000732421875" text="Description" />
+                <TableColumn fx:id="colDuree" prefWidth="81.5999755859375" text="Durée" />
+                <TableColumn fx:id="colStatut" minWidth="0.0" prefWidth="87.20001220703125" text="Statut">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="statut" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colPrix" prefWidth="75.199951171875" text="Prix" />
+<!--                <TableColumn fx:id="colAbonner" prefWidth="164.800048828125" text="Abonnement" />-->
+            </columns>
+        </TableView>
+        <Button layoutX="263.0" layoutY="599.0" mnemonicParsing="false" onAction="#redirigerAjouterOffre" text="Ajouter Offre" />
+        <Button layoutX="481.0" layoutY="599.0" mnemonicParsing="false" onAction="#modifierOffre" text="Modifier Offre" />
+        <Button layoutX="701.0" layoutY="599.0" mnemonicParsing="false" onAction="#supprimerOffre" text="Supprimer Offre" />
+        <Label layoutX="112.0" layoutY="84.0" prefHeight="29.0" prefWidth="209.0" text="Les offres de salle sport " wrapText="true">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+      <Button onAction="#retourSalle" layoutX="37.0" layoutY="29.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="221.0" text="Retour au liste des salles " />
+    </children>
+</AnchorPane>

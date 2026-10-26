@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="10" stylesheets="@Style.css" alignment="CENTER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.pidev.controllers.ModifierAbonnement">
+
+    <Label text="Modifier Abonnement" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <Label text="Nom Abonnement:"/>
+        <TextField fx:id="txtNomAbonnement"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Date Début:"/>
+        <DatePicker fx:id="datePickerDebut"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Date Fin:"/>
+        <DatePicker fx:id="datePickerFin" editable="false"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Enregistrer" onAction="#enregistrerModifications"/>
+        <Button text="Annuler" onAction="#annuler"/>
+    </HBox>
+
+</VBox>
